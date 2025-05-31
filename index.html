@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Singlish Typing Tool</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Custom Title Bar -->
+  <div class="title-bar">
+    <div class="title-left">
+      <img src="ump.png" alt="Logo" class="logo">
+      <span class="app-name">UMP Singlish</span>
+    </div>
+    <div class="title-right">
+      <button id="min-btn">−</button>
+      <button id="max-btn">☐</button>
+      <button id="close-btn">×</button>
+    </div>
+  </div>
+
+  <!-- Main Content Area -->
+  <div class="main-area">
+    <div class="container">
+      <img src="ump.png" alt="UMP_Logo" class="main_logo"/>
+      <h1>Singlish Typing Tool</h1>
+
+      <div class="field">
+        <label>Singlish</label>
+        <textarea id="box1" placeholder="Type in Singlish..."></textarea>
+        <button onclick="copyText('box1')">Copy</button>
+      </div>
+
+      <div class="field">
+        <label>Unicode</label>
+        <textarea id="box2" readonly></textarea>
+        <button onclick="copyText('box2')">Copy</button>
+      </div>
+
+      <div class="field">
+        <label>Font (Amali)</label>
+        <textarea id="box3" readonly style="font-family: 'AA Amali';"></textarea>
+        <button onclick="copyText('box3')">Copy</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="unicode.js"></script>
+  <script src="sfont.js"></script>
+  <script src="renderer.js"></script>
+  <script src="preload.js"></script>
+</body>
+</html>

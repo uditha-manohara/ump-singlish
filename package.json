@@ -1,0 +1,53 @@
+{
+  "name": "ump-singlish",
+  "version": "1.0.0",
+  "description": "UMP Sinhala Typing Tool",
+  "main": "main.js",
+  "author": "UMP",
+  "license": "MIT",
+  "scripts": {
+  "start": "electron .",
+  "build": "electron-builder",
+  "publish": "electron-builder --publish always"
+},
+  "devDependencies": {
+    "electron": "^29.0.0",
+    "electron-builder": "^26.0.12",
+    "electron-reload": "^2.0.0-alpha.1"
+  },
+  "dependencies": {
+    "electron-is-dev": "^3.0.1",
+    "electron-updater": "^5.3.0"
+  },
+  "build": {
+    "appId": "com.ump.singlish",
+    "productName": "UMP Sinhala Typing Tool",
+    "icon": "assets/ump.ico",
+    "files": [
+      "**/*"
+    ],
+    "directories": {
+      "buildResources": "assets",
+      "output": "dist"
+    },
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "umplk",
+        "repo": "ump-singlish"
+      }
+    ],
+    "win": {
+      "target": "nsis"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "UMP Singlish",
+      "license": "license.txt"
+    }
+  }
+}
